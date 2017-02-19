@@ -1,0 +1,21 @@
+body {
+	background-color: #d9d9d9;
+}
+
+.main-panel {
+	background-color: white;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.navbar-inverse {
+	background-color: #4c2985;
+	width: 100%;
+}
+
+#banner > h1 {
+	color: white;
+	margin-top: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
