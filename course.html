@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="course.css">
+
+	<!-- Script for tooltip -->
+	<script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		    $("[data-toggle=popover]").popover({html:true})
+		});
+	</script>
+</head>
+<body>
+	<div class="container main-panel">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">MyPlan 2.0</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a href="home.html">Home</a></li>
+		      <li class="active"><a href="search.html">Search <span class="glyphicon glyphicon-search"></span></a></li>
+		      <li><a href="#">Schedule <span class="glyphicon glyphicon-calendar"></a></li>
+		      <li><a href="#">Audit <span class="glyphicon glyphicon-flag"></a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class="container-fluid">
+			<h2>INFO 200</h2>
+		</div>
+	</div>
+</body>
+</html>
