@@ -13,6 +13,13 @@
 
 	<link rel="stylesheet" type="text/css" href="common.css">
 	<link rel="stylesheet" type="text/css" href="home.css">
+
+	<!-- Script for tooltip -->
+	<script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip(); 
+		});
+	</script>
 </head>
 <body>
 	<div class="container main-panel">
@@ -35,13 +42,20 @@
 			<div class="list-group">
 			  <a href="#" class="list-group-item" id="quarter-title">Spring 2017</a>
 			  <a href="#" class="list-group-item" id="planned-title">Planned</a>
-			  <a href="#collapse1" class="list-group-item dropdown-toggle" data-toggle="collapse">ENGL 199</a>
-			  <div id="collapse1" class="panel-collapse collapse">
-			  	<div class="panel-body list-group-item">Panel Body</div>
-			  </div>
-			  <a href="#collapse2" class="list-group-item dropdown-toggle" data-toggle="collapse">PHYS 122</a>
-			  <div id="collapse2" class="panel-collapse collapse">
-			  	<div class="panel-body list-group-item"> lsa Panel Body</div>
+			  <a href="#" class="list-group-item">ENGL 199 Interdisciplinary Writing/Natural Science (5)</a>
+			  <a href="#" class="list-group-item">PHYS 122 Electromagnetism (5)</a>
+			  <a href="#collapse3" class="list-group-item dropdown-toggle" data-toggle="collapse">JAPAN 213 Second-Year Japanese (5) A, AA</a>
+			  <div id="collapse3" class="panel-collapse collapse">
+			  	<div class="panel-body list-group-item section-dropdown">
+			  		<table class="section-table">
+			  			<tr class="section-info">
+			  				<td class="section" rowspan="2">A</td><td class="section-instructor" colspan="3">Akiko Iwata 4.5</td><td class="section-open">16/44 <a class="remove-plan" href="#" data-toggle="tooltip" data-placement="top" title="Click Me to remove from plan and notificaion"><span class="glyphicon glyphicon-remove-sign"></span></a></td>
+			  			</tr>
+			  			<tr class="section-info section-detail">
+			  				<td>SIG 224</td><td>TTh    9:30 AM - 10:20 AM</td><td>SLN: 15545</td><td>General Ed. Req: VLPA</td>
+			  			</tr>
+			  		</table>
+			  	</div>
 			  </div>
 			</div>
 		</div>
