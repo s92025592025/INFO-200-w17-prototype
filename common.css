@@ -20,9 +20,16 @@ body {
 	padding-bottom: 10px;
 }
 
+.list-group-title {
+	background-color: #f1ebd9;
+}
+
+.list-group-title:hover {
+	background-color: #f1ebd9;
+}
+
 .section-dropdown {
 	padding: 0px;
-
 }
 
 .section-table {
