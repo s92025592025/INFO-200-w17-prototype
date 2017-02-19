@@ -57,10 +57,25 @@ body {
 	overflow: hidden;
 }
 
+.section-closed {
+	color: #777;
+	overflow: hidden;
+}
+
 .remove-plan {
 	float: right;
 	padding-right: 10px;
 	color: red;
+}
+
+.more-option {
+	color: gold;
+	padding-right: 10px;
+	float: right;
+}
+
+.under-option {
+	text-align: center;
 }
 
 .section-detail {
