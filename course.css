@@ -55,8 +55,13 @@ h3 {
 	clear: left;
 }
 
+.ratings-title {
+	margin: 0px;
+}
+
 .ratings table {
 	font-size: 10pt;
+	margin-bottom: 10px;
 }
 
 .ratings table td, .ratings table th{
@@ -64,4 +69,8 @@ h3 {
 	padding-right: 3px;
 	padding-top: 2px;
 	padding-bottom: : 2px;
+}
+
+#Dave-Stearns-more ul, #Dave-Stearns-more a {
+	font-size: 10pt;
 }
