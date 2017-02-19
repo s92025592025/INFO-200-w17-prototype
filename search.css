@@ -1,4 +1,4 @@
-#panel-wraper {
+#search-wraper, #result-wraper {
 	width: 100%;
 }
 
@@ -7,4 +7,31 @@
 	margin-right: auto;
 	margin-left: auto;
 	background-color: #f1ebd9;
+	overflow: hidden;
+}
+
+#search-box > .panel-body {
+	padding-bottom: 10px; 
+}
+
+#search-input {
+	margin-bottom: 5px;
+}
+
+#filter-btn {
+	float: right;
+}
+
+#filter {
+	margin-top: 10px;
+}
+
+#result-wraper {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#result-wraper th,td{
+	text-align: center;
 }

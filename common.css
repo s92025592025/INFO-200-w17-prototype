@@ -81,6 +81,12 @@ body {
 	float: right;
 }
 
+.add-plan {
+	float: right;
+	padding-right: 10px;
+	color: green;
+}
+
 .under-option {
 	text-align: center;
 }

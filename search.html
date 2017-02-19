@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Search</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -37,13 +37,13 @@
 		    </ul>
 		  </div>
 		</nav>
-		<div class="container">
+		<div class="container-fluid">
 			<h2>Search</h2>
-			<div id="panel-wraper">
+			<div id="search-wraper">
 				<div class="panel panel-default" id="search-box">
 				  <div class="panel-body">
 				  	<form>
-					  <div class="input-group">
+					  <div class="input-group" id="search-input">
 					  	<span class="input-group-addon">Search</span>
 					    <input type="text" class="form-control" placeholder="Please enter key word or GE requirement">
 					    <div class="input-group-btn">
@@ -52,9 +52,51 @@
 					      </button>
 					    </div>
 					  </div>
+					  <label class="checkbox-inline"><input type="checkbox" value="">Seattle</label>
+					  <label class="checkbox-inline"><input type="checkbox" value="">Bothell</label>
+					  <label class="checkbox-inline"><input type="checkbox" value="">Tacoma</label>
+					  <a href="#" id="filter-btn" data-toggle="collapse" data-target="#filter">Filter <span class="	glyphicon glyphicon-menu-down"></span></a>
+					  <div id="filter" class="collapse">
+					  	Advenced Search:
+					  	<div class="checkbox">
+						  <label><input type="checkbox" value="">Open sections only</label>
+						</div>
+						<label class="checkbox-inline">Meeting Days</label>
+						<label class="checkbox-inline"><input type="checkbox" value="">Mon</label>
+						<label class="checkbox-inline"><input type="checkbox" value="">Tues</label>
+						<label class="checkbox-inline"><input type="checkbox" value="">Weds</label>
+						<label class="checkbox-inline"><input type="checkbox" value="">Thu</label>
+						<label class="checkbox-inline"><input type="checkbox" value="">Fri</label>
+						<label class="checkbox-inline"><input type="checkbox" value="">Sat</label>
+					  </div>
 					</form>
 				  </div>
 				</div>
+			</div>
+			<div id="result-wraper">
+				<table class="table table-striped">
+					<tr>
+						<th>Code</th>
+						<th>Title</th>
+						<th>Credits</th>
+						<th>GE</th>
+						<th>Availability</th>
+					</tr>
+					<tr>
+						<td>INFO 200</td>
+						<td><a href="#">Intellectual Foundations of Informatics</a></td>
+						<td>5</td>
+						<td>I&amp;S</td>
+						<td class="section-open">Open <a class="add-plan" href="#" data-toggle="tooltip" data-placement="top" title="Click Me to add to plan and notificaion"><span class="	glyphicon glyphicon-plus-sign"></span></a></td>
+					</tr>
+					<tr>
+						<td>INFO 201</td>
+						<td><a href="#">Technical Foundations</a></td>
+						<td>5</td>
+						<td>QSR</td>
+						<td class="section-open">Open <a class="more-option" href="#" data-toggle="popover" data-trigger="focus" title="More Options" data-content="<a class='remove-plan under-option' href='#'' data-toggle='tooltip' data-placement='top' title='Click Me to remove from plan and notificaion'><span class='glyphicon glyphicon-remove-sign'></span></a><a class='remove-plan under-option' href='#'' data-toggle='tooltip' data-placement='top' title='Click Me to subscribe for notificaion'><span class='glyphicon glyphicon-plus-sign'></span></a>"><span class="glyphicon glyphicon-menu-hamburger"></span></a></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>
