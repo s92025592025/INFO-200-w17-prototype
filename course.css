@@ -1,0 +1,67 @@
+#add-plan-btn {
+	background-color: #fedf82;
+	float: right;
+}
+
+#bookmark-btn {
+	float: right;
+	background-color: #eee6cd;
+}
+
+#bookmark-btn , #add-plan-btn{
+	margin-right: 5px;
+}
+
+#course-overview {
+	list-style-type: none;
+}
+
+#course-overview > li {
+	margin-bottom: 5px;
+}
+
+h3, #course-overview, .course-section-table{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h3 {
+	border-bottom: 2px solid rgb(136, 136, 136);
+}
+
+#sections {
+	margin-bottom: 20px;
+}
+
+#Dave-Stearns {
+	overflow: hidden;
+}
+
+.personal-info, #Dave-Stearns img {
+	float: left;
+	margin-right: 10px;
+}
+
+.personal-info dd {
+	font-size: 10pt;
+}
+
+.personal-info dt:not(.name) {
+	font-size: 15pt;
+}
+
+.ratings {
+	clear: left;
+}
+
+.ratings table {
+	font-size: 10pt;
+}
+
+.ratings table td, .ratings table th{
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 2px;
+	padding-bottom: : 2px;
+}

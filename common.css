@@ -50,6 +50,10 @@ body {
 	border-right: solid 1px #bcbcbc;
 }
 
+.planned {
+	background-color: gold;
+}
+
 .section {
 	width: 10%;
 }
