@@ -84,3 +84,8 @@ h3 {
 	color: gold;
 	cursor: pointer;
 }
+
+#maps {
+	margin-right: auto;
+	margin-left: auto;
+}
