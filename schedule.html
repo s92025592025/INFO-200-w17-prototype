@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Build Your Schedule</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="schedule.css">
+
+	<!-- Script for tooltip -->
+	<script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		    $("[data-toggle=popover]").popover({html:true})
+		});
+	</script>
+</head>
+<body>
+	<div class="container main-panel">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">MyPlan 2.0</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a href="home.html">Home</a></li>
+		      <li><a href="search.html">Search <span class="glyphicon glyphicon-search"></span></a></li>
+		      <li class="active"><a href="schedule.html">Schedule <span class="glyphicon glyphicon-calendar"></a></li>
+		      <li><a href="#">Audit <span class="glyphicon glyphicon-flag"></a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class="container-fluid">
+			<h2>Build your Schedule</h2>
+			<div id="filters">
+				<h3>Filters:</h3>
+				<div class="filter-options">
+					<p>Include sections that... </p>
+					<div class="checkbox">
+					  <label><input type="checkbox" value="" checked>Have enrollment restrictions</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" value="" checked>Overlap with my registered courses</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" value="">Are currently closed</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" value="">Are UW PCE sections</label>
+					</div>
+				</div>
+				<div class="filter-options">
+					<p>Exclude sections that meet on...</p>
+				</div>
+				<div class="filter-options">
+					<p>I travel between classes with...</p>
+					<div class="radio">
+					  <label><input type="radio" name="travel-way">Walking</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="travel-way">Bikes, Skate Boards...etc</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="travel-way">Cars, Buses, Scootors...etc</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="travel-way" checked>Mixed</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
