@@ -11,3 +11,7 @@
 #home-suggestion .panel{
 	margin: 0px;
 }
+
+.glyphicon-menu-down {
+	float: right;
+}
