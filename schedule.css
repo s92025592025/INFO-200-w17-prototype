@@ -18,3 +18,69 @@ h3 {
 	float: left;
 	margin-right: 10px;
 }
+
+.list-group-item {
+	overflow: hidden;
+}
+
+.schedule-option {
+	color: white;
+	font-weight: bold;
+	float: left;
+	width: 15%;
+	height: 90px;
+	margin-right: 3.8%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: gray;
+	border-radius: 3px;
+	padding-top: 5px;
+}
+
+.register-btn {
+	border: 1px solid white;
+	border-radius: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.register-btn:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+#schedule-left, #schedule-right {
+	color: black;
+	width: 1%;
+	text-align: center;
+	background-color: transparent;
+}
+
+#schedule-right {
+	margin-right: 0%;
+}
+
+.schedule-selected {
+	background-color: green;
+}
+
+.schedule-starred {
+	color: gold;
+	cursor: pointer;
+}
+
+.schedule-starred:hover {
+	color: white;
+}
+
+.schedule-unstarred {
+	color: white;
+}
+
+.schedule-unstarred:hover {
+	color: gold;
+	cursor: pointer;
+}
