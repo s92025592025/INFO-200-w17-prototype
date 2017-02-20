@@ -12,7 +12,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="common.css">
-	<link rel="stylesheet" type="text/css" href="home.css">
+	<link rel="stylesheet" type="text/css" href="schedule.css">
 
 	<!-- Script for tooltip -->
 	<script>
@@ -39,6 +39,42 @@
 		</nav>
 		<div class="container-fluid">
 			<h2>Build your Schedule</h2>
+			<div id="filters">
+				<h3>Filters:</h3>
+				<div class="filter-options">
+					<p>Include sections that... </p>
+					<div class="checkbox">
+					  <label><input type="checkbox" value="" checked>Have enrollment restrictions</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" value="" checked>Overlap with my registered courses</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" value="">Are currently closed</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" value="">Are UW PCE sections</label>
+					</div>
+				</div>
+				<div class="filter-options">
+					<p>Exclude sections that meet on...</p>
+				</div>
+				<div class="filter-options">
+					<p>I travel between classes with...</p>
+					<div class="radio">
+					  <label><input type="radio" name="travel-way">Walking</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="travel-way">Bikes, Skate Boards...etc</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="travel-way">Cars, Buses, Scootors...etc</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="travel-way" checked>Mixed</label>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

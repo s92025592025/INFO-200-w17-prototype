@@ -1,0 +1,20 @@
+#filters p {
+	margin: 0px;
+}
+
+#filters p {
+	font-weight: bold;
+}
+
+#filters {
+	overflow: hidden;
+}
+
+h3 {
+	border-bottom: 2px solid black;
+}
+
+.filter-options {
+	float: left;
+	margin-right: 10px;
+}
