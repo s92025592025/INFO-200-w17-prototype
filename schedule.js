@@ -18,6 +18,7 @@
 			document.querySelectorAll('.travel-option').onchange = validSchedule;
 		}
 		// display on block and calendar
+
 	};
 
 	function validSchedule (){
@@ -34,6 +35,79 @@
 
 		// will filter data later
 		filteredSchedule = SCHEDULES;
+	}
+
+	// pre: should give a schedule in JSON format to schedule
+	// post: will plot the schedule to calendar
+	function showCalendar (schedule){
+		var cal = {
+			header: null,
+			views: {
+		        	weekagenda: {
+			        	type: 'agendaWeek',
+			        	duration: {days: 6},
+			        	firstDay: 1
+			        }
+		        },
+		    defaultView: 'weekagenda',
+		    events: []
+		};
+
+		for(var key in schedule){
+			for(var i = 0; i < schedule[key].meeting.length; i++){
+				var event = {
+					title: key,
+					editable: false
+				};
+
+				// break meeting day
+				var day = schedule[key].meeting[i].day.match(/(M)|(W)|(Th|T)|(F)|(Sat\.)/g);
+				for(var s = 0; s < day.length; s++){
+					switch(day[s]){
+						case "M":
+							day[s] = 1;
+							break;
+						case "T":
+							day[s] = 2;
+							break;
+						case "W":
+							day[s] = 3;
+							break;
+						case "Th":
+							day[s] = 4;
+							break;
+						case "F":
+							day[s] = 5;
+							break;
+						case "Sat.":
+							day[s] = 6;
+							break;
+					}
+				}
+
+				event.dow = day;
+
+				// break down meeting time
+				var time = schedule[key].meeting[i].time.match(/[0-9]{1,2}[0-9]{2}/g);
+				for(var s = 0; s < time.length; s++){
+					var breakDown = time[s].split(/^([0-9]{1,2})([0-9]{2})$/);
+					if(Number(breakDown[1]) < 8){
+						breakDown[i] = Number(breakDown[1]) + 12;
+					}
+
+					if(s == 0){
+						event.start = breakDown[1] + ":" + breakDown[2] + ":00";
+					}else{
+						event.end = breakDown[1] + ":" + breakDown[2] + ":00";
+					}
+				}
+
+
+				cal.events.push(event);
+			}
+		}
+
+		$('#calendar').fullCalendar(cal);
 	}
 
 })();
