@@ -14,7 +14,7 @@
 
 	window.onload = function (){
 		// read filters
-		for(var i = 0; i < document.querySelectorAll('.travel-option')){
+		for(var i = 0; i < document.querySelectorAll('.travel-option').length; i++){
 			document.querySelectorAll('.travel-option').onchange = validSchedule;
 		}
 		// display on block and calendar
