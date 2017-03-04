@@ -4,7 +4,7 @@
 
 'use strict';
 
-const fs = require('file-system');
+const fs = require('fs');
 const classList = JSON.parse(fs.readFileSync(__dirname + '/data/classes.json'));
 
 // post: will return the whole list of classes provided in spring 2017
