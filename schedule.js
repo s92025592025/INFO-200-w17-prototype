@@ -7,6 +7,12 @@
 
 	console.log(Cookies.get('classes'));
 
-	// test browserfy
-	console.log(UWCourse.getClassSections(Cookies.getJSON('classes').classes[0]));
+	window.onload = function (){
+		// start find available schedule
+
+		// read filters
+
+		// display on block and calendar
+	};
+
 })();
