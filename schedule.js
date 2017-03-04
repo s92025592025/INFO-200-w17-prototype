@@ -18,8 +18,13 @@
 			document.querySelectorAll('.travel-option').onchange = validSchedule;
 		}
 		// display on block and calendar
-		showCalendar(SCHEDULES[1]);
+		filteredSchedule = SCHEDULES; // dummy line
+		showPossibleSchedule(filteredSchedule);
 	};
+
+	// pre: should give schedule an array of filtered schedule
+	// post: will show a list of possible schedule for users to click
+	function showPossibleSchedule (schedules){}
 
 	function validSchedule (){
 		var passedSchedule = [];
