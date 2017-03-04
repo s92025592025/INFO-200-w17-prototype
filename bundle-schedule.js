@@ -332,12 +332,21 @@ module.exports._checkTimeConflict = function (time1, time2){
 
 	const UWCourse = require('./UW-classes.js');
 
+	// dummy for developing state
 	Cookies.set('classes', {classes:["JAPAN 213", "PHYS 122", "ENGL 282"]});
 
-	console.log(Cookies.get('classes'));
+	// get "any" possible schedule
+	var schedules = UWCourse.buildSchedule(Cookies.getJSON('classes').classes);
+	console.log(schedules);
 
-	// test browserfy
-	console.log(UWCourse.getClassSections(Cookies.getJSON('classes').classes[0]));
+	window.onload = function (){
+		// start find available schedule
+
+		// read filters
+
+		// display on block and calendar
+	};
+
 })();
 },{"./UW-classes.js":1}],3:[function(require,module,exports){
 'use strict'
