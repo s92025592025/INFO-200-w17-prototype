@@ -11,7 +11,7 @@
 		// start find available schedule
 
 		// read filters
-
+		
 		// display on block and calendar
 	};
 
