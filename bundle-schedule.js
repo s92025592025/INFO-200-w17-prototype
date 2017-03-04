@@ -337,7 +337,7 @@ module.exports._checkTimeConflict = function (time1, time2){
 	var classes = Cookies.getJSON('classes');
 	console.log(classes.classes);
 	// get "any" possible schedule
-	var schedules = UWCourse.buildSchedule(Cookies.getJSON('classes').classes);
+	var schedules = UWCourse.buildSchedule(classes.classes);
 	console.log(schedules);
 
 	window.onload = function (){
