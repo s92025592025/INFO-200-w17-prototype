@@ -18,7 +18,7 @@
 			document.querySelectorAll('.travel-option').onchange = validSchedule;
 		}
 		// display on block and calendar
-
+		showCalendar(SCHEDULES[1]);
 	};
 
 	function validSchedule (){
