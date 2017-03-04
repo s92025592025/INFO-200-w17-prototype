@@ -5,7 +5,8 @@
 
 	// dummy for developing state
 	Cookies.set('classes', {classes:["JAPAN 213", "PHYS 122", "ENGL 282"]});
-	console.log(Cookies.getJSON('classes').classes);
+	var classes = Cookies.getJSON('classes');
+	console.log(classes.classes);
 	// get "any" possible schedule
 	var schedules = UWCourse.buildSchedule(Cookies.getJSON('classes').classes);
 	console.log(schedules);
