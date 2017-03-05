@@ -272,6 +272,8 @@
 						  "&mode=walking" + wayPoints;
 
 				console.log(map.src);
+				// see what is the are the buildings
+				console.log(displayDay[day]);
 
 				document.getElementById('directions').appendChild(map);
 			}
