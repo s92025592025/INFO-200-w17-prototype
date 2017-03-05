@@ -223,8 +223,8 @@
 		for(var key in schedule){
 			for(var i = 0; i < schedule[key].meeting.length; i++){
 				var meetingDay = schedule[key].meeting[i].day.match(/(M)|(W)|(Th|T)|(F)|(Sat)/g);
-				for(var day in meetingDay){
-					eachDay[day].push(schedule[key].meeting[i].building);
+				for(var s = 0; s < meetingDay.length; s++){
+					eachDay[meetingDay[s].trim()].push(schedule[key].meeting[i].building);
 				}
 			}
 		}
