@@ -20,6 +20,8 @@
 		// display on block and calendar
 		filteredSchedule = SCHEDULES; // dummy line
 		showPossibleSchedule(filteredSchedule);
+
+		console.log(sortSchedule(SCHEDULES[0]));
 	};
 
 	// pre: should give schedule an array of filtered schedule
@@ -205,6 +207,38 @@
 
 	// pre: should pass a json schedule to schedule
 	// post: will return a json sorted with time
-	function sortSchedule(schedule){}
+	function sortSchedule(schedule){
+		var sortArray = [];
+		for (var key in schedule){
+			sortArray.push(schedule[key]);
+		}
+
+		sortArray.sort(function (a, b){
+			var aStart = a.meeting[0].time.match(/[0-9]{3,4}/);
+			var bStart = b.meeting[0].time.match(/[0-9]{3,4}/);
+
+			if(Number(aStart) / 100 < 8){
+				aStart = Number(aStart) + 1200 + "";
+			}
+
+			if(Number(bStart) / 100 < 8){
+				bStart = Number(bStart) + 1200 + "";
+			}
+
+			return Number(aStart) - Number(bStart);
+		})
+
+		var newSchedule = {};
+
+		for(var i = 0; i < sortArray.length; i++){
+			var className = sortArray[i].abbr + " " + 
+							sortArray[i].num + " "  + 
+							sortArray[i].section;
+
+			newSchedule[className] = sortArray[i];
+		}
+
+		return newSchedule;
+	}
 
 })();
