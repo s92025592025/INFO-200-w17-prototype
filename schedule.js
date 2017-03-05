@@ -187,7 +187,7 @@
 				cal.events.push(event);
 			}
 		}
-
+		console.log(cal);
 		$('#calendar').fullCalendar('destroy');
 		$('#calendar').fullCalendar('render');
 		$('#calendar').fullCalendar(cal);
