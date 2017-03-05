@@ -130,10 +130,10 @@
 			views: {
 		        	settimana: {
 			        	type: 'agendaWeek',
-			        	duration: {days: 6},
+			        	duration: {days: 7},
+			        	columnFormat: 'dddd',
+			        	hiddenDays: [0]
 			        },
-			        columnFormat: 'dddd',
-			        hiddenDays: [0]
 		        },
 		    defaultView: 'settimana',
 		    events: []
@@ -177,8 +177,8 @@
 				var time = schedule[key].meeting[i].time.match(/[0-9]{1,2}[0-9]{2}/g);
 				for(var s = 0; s < time.length; s++){
 					var breakDown = time[s].split(/^([0-9]{1,2})([0-9]{2})$/);
-					if(breakDown[1].length < 2){
-						breakDown[1] = "0" + breakDown[1];
+					if(Number(breakDown[1]) < 8){
+						breakDown[1] = Number(breakDown[1]) + 12 + "";
 					}
 
 					if(s == 0){
