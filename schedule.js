@@ -24,7 +24,31 @@
 
 	// pre: should give schedule an array of filtered schedule
 	// post: will show a list of possible schedule for users to click
-	function showPossibleSchedule (schedules){}
+	function showPossibleSchedule (schedules){
+		// clean all column
+		document.getElementById('possible-schedules').innerHTML = "";
+		// insert left arrow
+		var leftArrow = document.createElement('div');
+		leftArrow.classList.add('schedule-option');
+		leftArrow.id = 'schedule-left';
+		var leftArrorSpam = document.createElement('span');
+		leftArrorSpam.classList.add('glyphicon');
+		leftArrorSpam.classList.add('glyphicon-chevron-left');
+		leftArrow.appendChild(leftArrorSpam);
+		document.getElementById('possible-schedules').appendChild(leftArrow);
+
+
+
+		// insert right arrow
+		var rightArrow = document.createElement('div');
+		rightArrow.classList.add('schedule-option');
+		rightArrow.id = 'schedule-right';
+		var rightArrorSpam = document.createElement('span');
+		rightArrorSpam.classList.add('glyphicon');
+		rightArrorSpam.classList.add('glyphicon-chevron-right');
+		rightArrow.appendChild(rightArrorSpam);
+		document.getElementById('possible-schedules').appendChild(rightArrow);
+	}
 
 	function validSchedule (){
 		var passedSchedule = [];
