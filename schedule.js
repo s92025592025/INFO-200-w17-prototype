@@ -222,7 +222,7 @@
 		// generate class route for each day
 		for(var key in schedule){
 			for(var i = 0; i < schedule[key].meeting.length; i++){
-				var meetingDay = schedule[key].meeting[i].match(/(M)|(W)|(Th|T)|(F)|(Sat)/g);
+				var meetingDay = schedule[key].meeting[i].day.match(/(M)|(W)|(Th|T)|(F)|(Sat)/g);
 				for(var day in meetingDay){
 					eachDay[day].push(schedule[key].meeting[i].building);
 				}
