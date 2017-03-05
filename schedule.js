@@ -1,5 +1,4 @@
 (function (){
-	'use strict';
 
 	const UWCourse = require('./UW-classes.js');
 	const UWRoute = require('./UW-route.js')
@@ -268,8 +267,8 @@
 			map.src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ" + 
 					  "&origin=" + start +
 					  "&destination=" + end + 
-					  "waypoints=" + wayPoints +
-					  "mode=walking";
+					  "&waypoints=" + wayPoints +
+					  "&mode=walking";
 
 			document.getElementById('directions').appendChild(map);
 		}
