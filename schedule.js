@@ -74,9 +74,11 @@
 
 				option.onclick = function (){
 					showCalendar(schedules[Number(this.id)]);
-					
+					console.log(schedules[Number(this.id)]);
 					for(var t = 0; t < document.querySelectorAll('schedule-option').length; t++){
+						console.log('tetsing1');
 						document.querySelectorAll('schedule-option')[t].classList.remove('schedule-selected');
+						console.log('tetsing2');
 					}
 
 					this.classList.add('schedule-selected');
