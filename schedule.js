@@ -202,7 +202,7 @@
 	// post: should display maps of each possible classes
 	function generateMap (schedule){
 		// consider this
-		// https://developers.google.com/maps/documentation/embed/start?hl=zh-tw
+		// https://developers.google.com/maps/documentation/embed/start?hl=zh-tw 
 
 		// clean directions
 		document.getElementById('directions').innerHTML = "";
