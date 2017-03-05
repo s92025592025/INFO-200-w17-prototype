@@ -257,6 +257,7 @@
 			var wayPoints = "";
 			// make way points
 			for(var i = 1; i < displayDay[day].length - 1; i++){
+				wayPoints += "&waypoints="
 				var fence = "|";
 				if(i == 1 && displayDay[day].length - 1 >= i + 1){
 					fence = "";
@@ -267,8 +268,7 @@
 			map.src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ" + 
 					  "&origin=" + start +
 					  "&destination=" + end + 
-					  "&waypoints=" + wayPoints +
-					  "&mode=walking";
+					  "&mode=walking" + wayPoints;
 
 			document.getElementById('directions').appendChild(map);
 		}
