@@ -90,3 +90,13 @@ h3 {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+iframe {
+	width: 45%;
+	height: 450px;
+	float: left;
+}
+
+#directions {
+	overflow: hidden;
+}
