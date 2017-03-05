@@ -205,7 +205,7 @@
 		// https://developers.google.com/maps/documentation/embed/start?hl=zh-tw
 
 		// clean directions
-		documentation.getElementById('directions').innerHTML = "";
+		document.getElementById('directions').innerHTML = "";
 
 		// tidy class for each day
 		var eachDay = {
