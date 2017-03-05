@@ -38,6 +38,47 @@
 		document.getElementById('possible-schedules').appendChild(leftArrow);
 
 		// start making btns for schedule option
+		if(schedules.length > 0){
+			var length = 5;
+
+			if(schedules.length < 5){
+				length = schedules.length;
+			}
+
+			for(var i = 0; i < length; i++){
+				var option = document.createElement('div');
+				option.classList.add('schedule-option');
+
+				if(i == 0){ // select it when it it the first option
+					option.classList.add('schedule-selected');
+					showCalendar(schedules[i]);
+				}
+
+				for(var key in schedules[i]){
+					option.innerHTML += key + "<br>";
+				}
+
+				var registerBtn = document.createElement('span');
+				registerBtn.classList.add('register-btn');
+				registerBtn.innerHTML = "Register";
+				option.appendChild(registerBtn);
+
+				var star = document.createElement('span');
+				star.classList.add('glyphicon');
+				star.classList.add('glyphicon-star');
+				star.classList.add('schedule-unstarred');
+				option.appendChild(star);
+
+				option.onclick = function (){
+					showCalendar(schedules[i]);
+				}
+
+				document.getElementById('possible-schedules').appendChild(option);
+
+			}
+		}else{
+			// clean everything
+		}
 
 		// insert right arrow
 		var rightArrow = document.createElement('div');
