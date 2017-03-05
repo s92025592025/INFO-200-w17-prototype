@@ -53,6 +53,7 @@
 				if(i == 0){ // select it when it it the first option
 					option.classList.add('schedule-selected');
 					showCalendar(schedules[i]);
+					generateMap(schedules[i]);
 				}
 
 				for(var key in schedules[i]){
@@ -74,6 +75,7 @@
 
 				option.onclick = function (){
 					showCalendar(schedules[Number(this.id)]);
+					generateMap(schedules[Number(this.id)]);
 
 					for(var t = 0; t < document.querySelectorAll('.schedule-option').length; t++){
 						document.querySelectorAll('.schedule-option')[t].classList.remove('schedule-selected');
