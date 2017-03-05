@@ -271,6 +271,8 @@
 						  "&destination=" + end + 
 						  "&mode=walking" + wayPoints;
 
+				console.log(map.src);
+
 				document.getElementById('directions').appendChild(map);
 			}
 		}
