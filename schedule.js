@@ -73,6 +73,11 @@
 
 				option.onclick = function (){
 					showCalendar(schedules[i]);
+					console.log(i);
+					for(var t = 0; t < document.querySelectorAll('schedule-option').length; t++){
+						document.querySelectorAll('schedule-option').classList.remove('schedule-selected');
+					}
+
 					this.classList.add('schedule-selected');
 				};
 
