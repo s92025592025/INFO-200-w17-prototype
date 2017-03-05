@@ -73,7 +73,6 @@
 				option.appendChild(star);
 
 				option.onclick = function (){
-					document.getElementById('calendar').innerHTML = "";
 					showCalendar(schedules[Number(this.id)]);
 
 					for(var t = 0; t < document.querySelectorAll('.schedule-option').length; t++){
@@ -189,6 +188,8 @@
 			}
 		}
 
+		$('#calendar').fullCalendar('destroy');
+		$('#calendar').fullCalendar('render');
 		$('#calendar').fullCalendar(cal);
 	}
 
