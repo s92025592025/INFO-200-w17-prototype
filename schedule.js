@@ -74,10 +74,10 @@
 
 				option.onclick = function (){
 					showCalendar(schedules[Number(this.id)]);
-					console.log(schedules[Number(this.id)]);
-					for(var t = 0; t < document.querySelectorAll('schedule-option').length; t++){
+
+					for(var t = 0; t < document.querySelectorAll('.schedule-option').length; t++){
 						console.log('tetsing1');
-						document.querySelectorAll('schedule-option')[t].classList.remove('schedule-selected');
+						document.querySelectorAll('.schedule-option')[t].classList.remove('schedule-selected');
 						console.log('tetsing2');
 					}
 
@@ -121,6 +121,8 @@
 	// pre: should give a schedule in JSON format to schedule
 	// post: will plot the schedule to calendar
 	function showCalendar (schedule){
+		console.log('showing:');
+		console.log(schedule);
 		var cal = {
 			header: null,
 			views: {
