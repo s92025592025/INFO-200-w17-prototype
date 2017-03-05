@@ -225,7 +225,7 @@
 				bStart = Number(bStart) + 1200 + "";
 			}
 
-			return Number(aStart) - Number(bStart);
+			return Number(bStart) - Number(aStart);
 		})
 
 		var newSchedule = {};
