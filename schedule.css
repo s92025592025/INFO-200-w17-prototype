@@ -61,6 +61,7 @@ h3 {
 
 #schedule-right {
 	margin-right: 0%;
+	float: right;
 }
 
 .schedule-selected {

@@ -37,7 +37,7 @@
 		leftArrow.appendChild(leftArrorSpam);
 		document.getElementById('possible-schedules').appendChild(leftArrow);
 
-
+		// start making btns for schedule option
 
 		// insert right arrow
 		var rightArrow = document.createElement('div');
