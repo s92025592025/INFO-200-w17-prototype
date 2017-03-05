@@ -127,8 +127,9 @@
 		        	weekagenda: {
 			        	type: 'agendaWeek',
 			        	duration: {days: 6},
-			        	firstDay: 1
-			        }
+			        },
+			        columnFormat: 'dddd',
+			        hiddenDays: [0]
 		        },
 		    defaultView: 'weekagenda',
 		    events: []
@@ -172,8 +173,8 @@
 				var time = schedule[key].meeting[i].time.match(/[0-9]{1,2}[0-9]{2}/g);
 				for(var s = 0; s < time.length; s++){
 					var breakDown = time[s].split(/^([0-9]{1,2})([0-9]{2})$/);
-					if(Number(breakDown[1]) < 8){
-						breakDown[i] = Number(breakDown[1]) + 12;
+					if(breakDown[1].length < 2){
+						breakDown[i] = "0" + breakDown[1];
 					}
 
 					if(s == 0){
