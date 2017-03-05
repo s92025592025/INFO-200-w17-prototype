@@ -73,8 +73,8 @@
 
 				option.onclick = function (){
 					showCalendar(schedules[i]);
-					console.log('apple');
-				}
+					this.classList.add('schedule-selected');
+				};
 
 				document.getElementById('possible-schedules').appendChild(option);
 
