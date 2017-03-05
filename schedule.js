@@ -122,16 +122,20 @@
 		console.log('showing:');
 		console.log(schedule);
 		var cal = {
-			header: null,
+			header: {
+		        left: '',
+		        center: '',
+		        right: '',
+		    },
 			views: {
-		        	weekagenda: {
+		        	settimana: {
 			        	type: 'agendaWeek',
 			        	duration: {days: 6},
 			        },
 			        columnFormat: 'dddd',
 			        hiddenDays: [0]
 		        },
-		    defaultView: 'weekagenda',
+		    defaultView: 'settimana',
 		    events: []
 		};
 
@@ -174,7 +178,7 @@
 				for(var s = 0; s < time.length; s++){
 					var breakDown = time[s].split(/^([0-9]{1,2})([0-9]{2})$/);
 					if(breakDown[1].length < 2){
-						breakDown[i] = "0" + breakDown[1];
+						breakDown[1] = "0" + breakDown[1];
 					}
 
 					if(s == 0){
