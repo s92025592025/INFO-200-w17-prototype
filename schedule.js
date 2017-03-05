@@ -55,7 +55,9 @@
 				}
 
 				for(var key in schedules[i]){
-					option.innerHTML += key + "<br>";
+					if(key.match(/^[A-Z]+\s+[0-9]{3}\s+[A-Z]$/)){
+						option.innerHTML += key + "<br>";
+					}
 				}
 
 				var registerBtn = document.createElement('span');
@@ -71,6 +73,7 @@
 
 				option.onclick = function (){
 					showCalendar(schedules[i]);
+					console.log('apple');
 				}
 
 				document.getElementById('possible-schedules').appendChild(option);
