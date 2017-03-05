@@ -233,18 +233,18 @@
 		var displayDay = {};
 		for(var day in eachDay){
 			if(Object.keys(displayDay).length == 0){
-				displayDay[key] = eachDay[key];
+				displayDay[day] = eachDay[day];
 			}else{
 				// check if display already have same schedule 
 				var addFlag = true;
 				for(var display in displayDay){
-					if(eachDay[key].toString() == displayDay[display].toString()){
+					if(eachDay[day].toString() == displayDay[display].toString()){
 						addFlag = false;
 					}
 				}
 
 				if(addFlag){
-					displayDay[key] = eachDay[key];
+					displayDay[day] = eachDay[day];
 				}
 			}
 		}
