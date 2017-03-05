@@ -243,7 +243,6 @@ module.exports._buildSchedule = function (classes, scheduleJson, finalSchedule){
 							 sectionQZ[s].num + " " +
 							 sectionQZ[s].section;
 				scheduleJson[qzName] = sectionQZ[s];
-				console.log(scheduleJson);
 				if(this._checkConflict(scheduleJson)){
 					this._buildSchedule(classes, scheduleJson, finalSchedule)
 				}

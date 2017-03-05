@@ -217,20 +217,21 @@
 			var aStart = a.meeting[0].time.match(/[0-9]{3,4}/);
 			var bStart = b.meeting[0].time.match(/[0-9]{3,4}/);
 
-			if(Number(aStart) / 100 < 8){
+			if(Number(aStart[0]) / 100 < 8){
 				aStart = Number(aStart) + 1200 + "";
 			}
 
-			if(Number(bStart) / 100 < 8){
+			if(Number(bStart[0]) / 100 < 8){
 				bStart = Number(bStart) + 1200 + "";
 			}
 
-			return Number(aStart) - Number(bStart);
+			return Number(aStart[0]) - Number(bStart[0]);
 		})
 
 		var newSchedule = {};
 
-		for(var i = 0; i < sortArray.length; i++){
+
+		for(var i = sortArray.length - 1; i >= 0; i--){
 			var className = sortArray[i].abbr + " " + 
 							sortArray[i].num + " "  + 
 							sortArray[i].section;
