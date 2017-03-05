@@ -119,8 +119,6 @@
 	// pre: should give a schedule in JSON format to schedule
 	// post: will plot the schedule to calendar
 	function showCalendar (schedule){
-		console.log('showing:');
-		console.log(schedule);
 		var cal = {
 			header: {
 		        left: '',
@@ -192,10 +190,21 @@
 				cal.events.push(event);
 			}
 		}
-		console.log(cal);
+
 		$('#calendar').fullCalendar('destroy');
 		$('#calendar').fullCalendar('render');
 		$('#calendar').fullCalendar(cal);
 	}
+
+	// pre:
+	// post: should display maps of each possible classes
+	function generateMap (){
+		// consider this
+		// https://developers.google.com/maps/documentation/embed/start?hl=zh-tw
+	}
+
+	// pre: should pass a json schedule to schedule
+	// post: will return a json sorted with time
+	function sortSchedule(schedule){}
 
 })();
