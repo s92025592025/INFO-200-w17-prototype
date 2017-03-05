@@ -235,7 +235,7 @@
 			if(Object.keys(displayDay).length == 0){
 				displayDay[key] = eachDay[key];
 			}else{
-				// check if display already have same schedule
+				// check if display already have same schedule 
 				var addFlag = true;
 				for(var display in displayDay){
 					if(eachDay[key].toString() == displayDay[display].toString()){
