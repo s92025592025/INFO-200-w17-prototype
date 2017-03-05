@@ -250,27 +250,29 @@
 
 		// show map
 		for(var day in displayDay){
-			var route = new UWRoute('AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ');
-			var map = document.createElement('iframe');
-			var start = route.getAddress(displayDay[day][0]).replace(" ", "+");
-			var end = route.getAddress(displayDay[day][displayDay[day].length - 1]).replace(" ", "+");
-			var wayPoints = "";
-			// make way points
-			for(var i = 1; i < displayDay[day].length - 1; i++){
-				wayPoints += "&waypoints="
-				var fence = "|";
-				if(i == 1 && displayDay[day].length - 1 >= i + 1){
-					fence = "";
+			if(displayDay[day].length > 0){
+				var route = new UWRoute('AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ');
+				var map = document.createElement('iframe');
+				var start = route.getAddress(displayDay[day][0]).replace(" ", "+");
+				var end = route.getAddress(displayDay[day][displayDay[day].length - 1]).replace(" ", "+");
+				var wayPoints = "";
+				// make way points
+				for(var i = 1; i < displayDay[day].length - 1; i++){
+					wayPoints += "&waypoints="
+					var fence = "|";
+					if(i == 1 && displayDay[day].length - 1 >= i + 1){
+						fence = "";
+					}
+					wayPoints += fence + route.getAddress(displayDay[day][i]).replace(" ", "+");
 				}
-				wayPoints += fence + route.getAddress(displayDay[day][i]).replace(" ", "+");
+
+				map.src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ" + 
+						  "&origin=" + start +
+						  "&destination=" + end + 
+						  "&mode=walking" + wayPoints;
+
+				document.getElementById('directions').appendChild(map);
 			}
-
-			map.src = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ" + 
-					  "&origin=" + start +
-					  "&destination=" + end + 
-					  "&mode=walking" + wayPoints;
-
-			document.getElementById('directions').appendChild(map);
 		}
 
 	}
