@@ -4,7 +4,6 @@
 'use strict';
 /* For testing and reference purpose */
 const fs = require('fs');
-const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
 var UWRoute = function (apiKey){
 	this._apiKey = apiKey;
