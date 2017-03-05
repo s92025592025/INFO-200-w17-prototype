@@ -47,6 +47,7 @@
 
 			for(var i = 0; i < length; i++){
 				var option = document.createElement('div');
+				option.id = i + "";
 				option.classList.add('schedule-option');
 
 				if(i == 0){ // select it when it it the first option
@@ -72,10 +73,10 @@
 				option.appendChild(star);
 
 				option.onclick = function (){
-					showCalendar(schedules[i]);
-					console.log(i);
+					showCalendar(schedules[Number(this.id)]);
+					
 					for(var t = 0; t < document.querySelectorAll('schedule-option').length; t++){
-						document.querySelectorAll('schedule-option').classList.remove('schedule-selected');
+						document.querySelectorAll('schedule-option')[t].classList.remove('schedule-selected');
 					}
 
 					this.classList.add('schedule-selected');
