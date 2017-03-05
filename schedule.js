@@ -20,8 +20,6 @@
 		// display on block and calendar
 		filteredSchedule = SCHEDULES; // dummy line
 		showPossibleSchedule(filteredSchedule);
-
-		console.log(sortSchedule(SCHEDULES[0]));
 	};
 
 	// pre: should give schedule an array of filtered schedule
@@ -198,11 +196,83 @@
 		$('#calendar').fullCalendar(cal);
 	}
 
-	// pre:
+	// pre: should pass in an array of a schedule ot schedule
 	// post: should display maps of each possible classes
-	function generateMap (){
+	function generateMap (schedule){
 		// consider this
 		// https://developers.google.com/maps/documentation/embed/start?hl=zh-tw
+
+		// clean directions
+		documentation.getElementById('directions').innerHTML = "";
+
+		// tidy class for each day
+		var eachDay = {
+			M: [],
+			T: [],
+			W: [],
+			Th: [],
+			F: [],
+			Sat: []
+		};
+		// sort schedule
+		schedule = sortSchedule(schedule);
+
+		// generate class route for each day
+		for(var key in schedule){
+			for(var i = 0; i < schedule[key].meeting.length; i++){
+				var meetingDay = schedule[key].meeting[i].match(/(M)|(W)|(Th|T)|(F)|(Sat)/g);
+				for(var day in meetingDay){
+					eachDay[day].push(schedule[key].meeting[i].building);
+				}
+			}
+		}
+
+		// find the essencial days to display
+		var displayDay = {};
+		for(var day in eachDay){
+			if(Object.keys(displayDay).length == 0){
+				displayDay[key] = eachDay[key];
+			}else{
+				// check if display already have same schedule
+				var addFlag = true;
+				for(var display in displayDay){
+					if(eachDay[key].toString == displayDay[display]){
+						addFlag = false;
+					}
+				}
+
+				if(addFlag){
+					displayDay[key] = eachDay[key];
+				}
+			}
+		}
+
+		// show map
+
+	}
+
+	// pre: should pass in the two array to compare
+	// post: will return true if the two array contains exact same elements
+	//		 (don't have to be in same order), and vice versa
+	function sameArray (array1, array2){
+		if(array1.length != array2.length){
+			return false;
+		}
+
+		for(var i = 0; i < array1.length; i++){
+			var flag = true;
+			for(var s = 0; s < array2.length; s++){
+				if(array1[i] == array2[s]){
+					flag = false;
+				}
+			}
+
+			if(flag){
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 	// pre: should pass a json schedule to schedule
