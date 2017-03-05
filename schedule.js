@@ -238,7 +238,7 @@
 				// check if display already have same schedule
 				var addFlag = true;
 				for(var display in displayDay){
-					if(eachDay[key].toString == displayDay[display]){
+					if(eachDay[key].toString() == displayDay[display].toString()){
 						addFlag = false;
 					}
 				}
