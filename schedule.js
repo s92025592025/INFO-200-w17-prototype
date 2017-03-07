@@ -106,7 +106,7 @@
 	function validSchedule (){
 		console.log('filtering schedule');
 		filteredSchedule = [];
-		var route = new UWRoute('AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ');
+		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');
 
 		if(this.value == 'mixed'){
 			filteredSchedule = SCHEDULES;
