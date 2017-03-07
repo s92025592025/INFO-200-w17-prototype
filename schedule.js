@@ -16,11 +16,9 @@
 		for(var i = 0; i < document.querySelectorAll('.travel-option').length; i++){
 			document.querySelectorAll('.travel-option')[i].onclick = validSchedule;
 		}
-		console.log('testing1');
+
 		document.querySelector('.travel-option').click();
-		console.log('testing2');
 		showPossibleSchedule(filteredSchedule);
-		console.log(filteredSchedule)
 	};
 
 	// pre: should give schedule an array of filtered schedule 
@@ -104,7 +102,6 @@
 	}
 
 	function validSchedule (){
-		console.log('filtering schedule');
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');
 
@@ -298,10 +295,6 @@
 						  "&origin=" + start +
 						  "&destination=" + end + 
 						  "&mode=walking" + wayPoints;
-
-				console.log(map.src);
-				// see what is the are the buildings
-				console.log(displayDay[day]);
 
 				document.getElementById('directions').appendChild(map);
 			}
