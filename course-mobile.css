@@ -1,0 +1,40 @@
+
+
+@media all and (orientation: portrait) {
+    .container {
+    	padding-top: 30px;
+    	padding-right: 5px;
+    	padding-left: 5px;
+		margin: 0px;
+		width: 100%;
+	}
+
+	h2 {
+		padding-right: 30px;
+		padding-left: 30px;
+		font-size: 30pt;
+	}
+ 
+	#course-overview {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	nav {
+		display: none;
+	}
+
+	table {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	h2 > .btn {
+		font-size: 25pt;
+	}
+
+	.not-on-mobile {
+		display: none;
+	}
+
+}
