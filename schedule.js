@@ -108,7 +108,7 @@
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ');
 
-		if(this.value == mixed){
+		if(this.value == 'mixed'){
 			filteredSchedule = SCHEDULES;
 		}else{
 			for(var i = 0; i < SCHEDULES.length; i++){
