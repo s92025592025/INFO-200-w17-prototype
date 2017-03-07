@@ -228,6 +228,7 @@
 			}
 		}
 
+		console.log('hellllllll yeahhhhhhh');
 		console.log(eachDay);
 
 		// find the essencial days to display
