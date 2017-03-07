@@ -33,8 +33,24 @@
 		font-size: 25pt;
 	}
 
+	h3 {
+		font-size: 30pt;
+	}
+
+	label {
+		font-size: 20pt;
+	}
+
+	li div {
+		font-size: 15pt;
+	}
+
 	.not-on-mobile {
 		display: none;
+	}
+
+	.section-info {
+
 	}
 
 }
