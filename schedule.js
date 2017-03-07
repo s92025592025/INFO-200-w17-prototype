@@ -104,6 +104,7 @@
 	}
 
 	function validSchedule (){
+		console.log('filtering schedule');
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ');
 
