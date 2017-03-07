@@ -218,7 +218,7 @@
 		// sort schedule
 		schedule = sortSchedule(schedule);
 
-		// generate class route for each day
+		// generate class route for each day 
 		for(var key in schedule){
 			for(var i = 0; i < schedule[key].meeting.length; i++){
 				var meetingDay = schedule[key].meeting[i].day.match(/(M)|(W)|(Th|T)|(F)|(Sat)/g);
