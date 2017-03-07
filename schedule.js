@@ -228,6 +228,8 @@
 			}
 		}
 
+		console.log(eachDay);
+
 		// find the essencial days to display
 		var displayDay = {};
 		for(var day in eachDay){
