@@ -81,7 +81,7 @@ UWRoute.prototype.getTravelTime = function (start, end, mode = "walking"){
 	response.onload = function (){
 		var response = JSON.parse(this.responseText);
 		if(response.status == 'OK'){
-			travelTime = response.routes[0].legs[0].duration.text;
+			travelTime = response.routes[0].legs[0].duration.value;
 		}else{
 			travelTime = response.status;
 		}

@@ -14,10 +14,9 @@
 	window.onload = function (){
 		// read filters
 		for(var i = 0; i < document.querySelectorAll('.travel-option').length; i++){
-			document.querySelectorAll('.travel-option').onchange = validSchedule;
+			document.querySelectorAll('.travel-option').onclick = validSchedule;
 		}
-		// display on block and calendar
-		filteredSchedule = SCHEDULES; // dummy line
+		document.querySelector('.travel-option').click();
 		showPossibleSchedule(filteredSchedule);
 	};
 
@@ -102,19 +101,43 @@
 	}
 
 	function validSchedule (){
-		var passedSchedule = [];
+		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyBRJAizomD3x1U7FX2PZM7PEDxs_UQXFWQ');
 
 		if(this.value == mixed){
 			filteredSchedule = SCHEDULES;
-		}
+		}else{
+			for(var i = 0; i < SCHEDULES.length; i++){
+				// filter travek time
+				var sortedSchedule = sortSchedule(SCHEDULES[i]);
+				var flag = true;
+				for(var key1 in sortedSchedule){
+					for(var key2 in sortedSchedule){
+						if(key1 != key2){
+							var end = Number(sortedSchedule[key1].meeting[0].time.match(/[0-9]{3,4}/g)[1]);
+							var start = Number(sortedSchedule[key2].meeting[0].time.match(/[0-9]{3,4}/g)[0]);
+							var period = (start % 100 - end % 100 + (Math.floor(start / 100)) * 60) * 60
 
-		for(var i = 0; i < SCHEDULES.length; i++){
-			// filter travek time
+							var travelTime = route.getTravelTime(sortedSchedule[key1].meeting[0].building, 
+																 sortedSchedule[key2].meeting[0].building,
+																 this.value);
+
+							if(period / 100 < Math.floor(travelTime / 100)){
+								flag = false;
+							}
+
+						}
+					}
+				}
+
+				if(flag){
+					filteredSchedule.push(SCHEDULES[i]);
+				}
+			}
 		}
 
 		// will filter data later
-		filteredSchedule = SCHEDULES;
+		//filteredSchedule = SCHEDULES;
 	}
 
 	// pre: should give a schedule in JSON format to schedule
