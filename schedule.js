@@ -229,6 +229,7 @@
 		}
 
 		console.log('hellllllll yeahhhhhhh');
+		console.log('Why not render this WTH?');
 		console.log(eachDay);
 
 		// find the essencial days to display
