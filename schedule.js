@@ -14,7 +14,7 @@
 	window.onload = function (){
 		// read filters
 		for(var i = 0; i < document.querySelectorAll('.travel-option').length; i++){
-			document.querySelectorAll('.travel-option').onclick = validSchedule;
+			document.querySelectorAll('.travel-option')[i].onclick = validSchedule;
 		}
 		console.log('testing1');
 		document.querySelector('.travel-option').click();
