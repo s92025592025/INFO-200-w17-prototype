@@ -77,7 +77,7 @@ UWRoute.prototype.getTravelTime = function (start, end, mode = "walking"){
 						 '&origin=' + start.lat + ',' + start.lng +
 						 '&destination=' + end.lat + ',' + end.lng +
 						 '&mode=' + mode
-				  , false);
+				  , true);
 	response.onload = function (){
 		var response = JSON.parse(this.responseText);
 		if(response.status == 'OK'){
