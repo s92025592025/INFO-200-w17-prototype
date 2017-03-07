@@ -140,6 +140,7 @@
 			}
 		}
 
+		showPossibleSchedule(filteredSchedule);
 		// will filter data later
 		//filteredSchedule = SCHEDULES;
 	}
