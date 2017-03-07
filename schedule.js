@@ -21,7 +21,7 @@
 		showPossibleSchedule(filteredSchedule);
 	};
 
-	// pre: should give schedule an array of filtered schedule
+	// pre: should give schedule an array of filtered schedule 
 	// post: will show a list of possible schedule for users to click
 	function showPossibleSchedule (schedules){
 		// clean all column
