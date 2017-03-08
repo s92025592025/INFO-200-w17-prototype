@@ -18,7 +18,6 @@
 		}
 
 		document.querySelector('.travel-option').click();
-		showPossibleSchedule(filteredSchedule);
 	};
 
 	// pre: should give schedule an array of filtered schedule 
