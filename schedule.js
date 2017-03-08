@@ -99,9 +99,12 @@
 		rightArrorSpam.classList.add('glyphicon-chevron-right');
 		rightArrow.appendChild(rightArrorSpam);
 		document.getElementById('possible-schedules').appendChild(rightArrow);
+
+		document.querySelector('.progress').style.display = 'none';
 	}
 
 	function validSchedule (){
+		document.querySelector('.progress').style.display = 'block';
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');
 
