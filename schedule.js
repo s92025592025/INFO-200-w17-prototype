@@ -128,7 +128,7 @@
 
 							var travelTime = 0;
 
-							setTimeOut(function() {
+							setTimeout(function() {
 								travelTime = route.getTravelTime(sortedSchedule[key1].meeting[0].building, 
 																 sortedSchedule[key2].meeting[0].building,
 																 this.value)
