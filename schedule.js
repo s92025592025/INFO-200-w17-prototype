@@ -98,14 +98,9 @@
 		rightArrorSpam.classList.add('glyphicon-chevron-right');
 		rightArrow.appendChild(rightArrorSpam);
 		document.getElementById('possible-schedules').appendChild(rightArrow);
-
-		console.log('turn off');
-		document.getElementById('feedback').innerHTML = ""
 	}
 
 	function validSchedule (){
-		document.getElementById('feedback').innerHTML = "<div class=\"progress-bar progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:100%;\">	Finding the Right Schedule for You </div>"
-		console.log('turn on');
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');
 
