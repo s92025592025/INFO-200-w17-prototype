@@ -105,6 +105,7 @@
 
 	function validSchedule (){
 		document.querySelector('.progress').style.display = 'block';
+		console.log(document.querySelector('.progress').style.display);
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');
 
