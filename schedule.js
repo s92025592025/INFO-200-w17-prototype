@@ -100,14 +100,11 @@
 		document.getElementById('possible-schedules').appendChild(rightArrow);
 
 		console.log('turn off');
-		document.getElementById('feedback').classList.remove('progress-on');
-		document.getElementById('feedback').classList.add('progress-off');
-		console.log(document.getElementById('feedback').style.display);
+		document.getElementById('feedback').innerHTML = ""
 	}
 
 	function validSchedule (){
-		document.getElementById('feedback').classList.remove('progress-off');
-		document.getElementById('feedback').classList.add('progress-on');
+		document.getElementById('feedback').innerHTML = "<div class=\"progress-bar progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:100%;\">	Finding the Right Schedule for You </div>"
 		console.log('turn on');
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');
