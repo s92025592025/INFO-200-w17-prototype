@@ -108,8 +108,7 @@
 	function validSchedule (){
 		document.getElementById('feedback').classList.remove('progress-off');
 		document.getElementById('feedback').classList.add('progress-on');
-		console.log(document.getElementById('feedback').style.display);
-		setTimeout(function(){ console.log("Hello"); }, 3000);
+		console.log('turn on');
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');
 
@@ -127,9 +126,13 @@
 							var start = Number(sortedSchedule[key2].meeting[0].time.match(/[0-9]{3,4}/g)[0]);
 							var period = (start % 100 - end % 100 + (Math.floor(start / 100)) * 60) * 60
 
-							var travelTime = route.getTravelTime(sortedSchedule[key1].meeting[0].building, 
+							var travelTime = 0;
+
+							setTimeOut(function() {
+								travelTime = route.getTravelTime(sortedSchedule[key1].meeting[0].building, 
 																 sortedSchedule[key2].meeting[0].building,
-																 this.value);
+																 this.value)
+								}, 1000);
 
 							if(period / 100 < Math.floor(travelTime / 100)){
 								flag = false;
