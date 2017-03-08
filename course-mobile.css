@@ -49,8 +49,56 @@
 		display: none;
 	}
 
-	.section-info {
+	.section-info > td{
+		padding-top: 3px;
+		padding-bottom: 3px;
+	}
 
+	.section-closed ,.section-open {
+		width: 10%;
+		text-align: center;
+		font-size: 30pt;
+	}
+
+	.add-plan, .more-option {
+		float: none;
+	}
+
+	.section-info {
+		font-size: 20pt;
+	}
+
+
+	.section, .section-instructor {
+		font-size: 30pt;
+	}
+
+	.personal-info dt:not(.name) {
+		font-size: 30pt;
+	}
+
+	.personal-info dd {
+		font-size: 20pt;
+	}
+
+	.ratings-table {
+		font-size: 15pt;
+	}
+
+	.section-instructor {
+		width: 80%;
+	}
+
+	#Dave-Stearns-more label {
+		font-size: 20pt;
+	}
+
+	#Dave-Stearns-more li {
+		font-size: 17pt;
+	}
+
+	#Dave-Stearns-more li div {
+		font-size: 17pt;
 	}
 
 }
