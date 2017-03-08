@@ -100,12 +100,13 @@
 		rightArrow.appendChild(rightArrorSpam);
 		document.getElementById('possible-schedules').appendChild(rightArrow);
 
-		document.querySelector('.progress').style.display = 'none';
+		console.log('turn off');
+		document.getElementById('feedback').style.display = 'none';
 	}
 
 	function validSchedule (){
-		document.querySelector('.progress').style.display = 'block';
-		console.log(document.querySelector('.progress').style.display);
+		document.getElementById('feedback').style.display = 'block';
+		console.log(document.getElementById('feedback').style.display);
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');
 
