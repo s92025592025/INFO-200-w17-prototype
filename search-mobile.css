@@ -1,0 +1,62 @@
+@media all and (orientation: portrait) {
+    .container {
+    	padding-top: 30px;
+    	padding-right: 5px;
+    	padding-left: 5px;
+		margin: 0px;
+		width: 100%;
+	}
+
+	h2 {
+		padding-right: 30px;
+		padding-left: 30px;
+		font-size: 30pt;
+	}
+
+	nav {
+		display: none;
+	}
+
+	table {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	h2 > .btn {
+		font-size: 25pt;
+	}
+
+	h3 {
+		font-size: 30pt;
+	}
+
+	label {
+		font-size: 20pt;
+	}
+
+	li div {
+		font-size: 15pt;
+	}
+
+	.not-on-mobile {
+		display: none;
+	}
+
+	#search-box {
+		font-size: 25pt;
+	}
+
+	#search-box, #result-wraper {
+		width: 98%;
+	}
+
+	#result-wraper {
+		font-size: 20pt;
+	}
+
+	.form-control , .btn, .input-group-addon{
+		font-size: 25pt;
+		height: 60px;
+	}
+	
+}
