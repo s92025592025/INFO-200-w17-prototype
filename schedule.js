@@ -101,11 +101,14 @@
 		document.getElementById('possible-schedules').appendChild(rightArrow);
 
 		console.log('turn off');
-		document.getElementById('feedback').style.display = 'none';
+		document.getElementById('feedback').classList.remove('progress-on');
+		document.getElementById('feedback').classList.add('progress-off');
+		console.log(document.getElementById('feedback').style.display);
 	}
 
 	function validSchedule (){
-		document.getElementById('feedback').style.display = 'block';
+		document.getElementById('feedback').classList.remove('progress-off');
+		document.getElementById('feedback').classList.add('progress-on');
 		console.log(document.getElementById('feedback').style.display);
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');

@@ -105,3 +105,11 @@ iframe {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
+.progress-off {
+	display: none;
+}
+
+.progress-on {
+	display: block;
+}
