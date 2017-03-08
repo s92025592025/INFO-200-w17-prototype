@@ -109,6 +109,7 @@
 		document.getElementById('feedback').classList.remove('progress-off');
 		document.getElementById('feedback').classList.add('progress-on');
 		console.log(document.getElementById('feedback').style.display);
+		setTimeout(function(){ console.log("Hello"); }, 3000);
 		filteredSchedule = [];
 		var route = new UWRoute('AIzaSyDF_5IuIPkP-R2DoT352ZXhOdjhZhEMCUo');
 
